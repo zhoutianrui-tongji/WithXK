@@ -127,38 +127,9 @@
     </div>
     <script type="text/javascript" src="./jquery-1.12.2.min.js"></script>
     <script type="text/javascript" src="bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/iamjohnnyzhuang/Js-plugins-by-person/master/countTime/count-time.js"></script>
     <script>
-    var cur = new Date();
-    var his = new Date("2016/01/30 23:45");
-    var difference = cur.getTime() - his.getTime();
-    main();
-    setInterval(main, 1000);
-
-    function main() {
-        var diff = calcDifference(difference);
-        $('#day').text(diff[0]);
-        $('#hour').text(diff[1]);
-        $('#minute').text(diff[2]);
-        $('#second').text(diff[3]);
-        difference = difference + 1000;
-    }
-
-    /**
-     * 计算差距的具体时间
-     * @param  {[type]} day [description]
-     * @return {[type]}     [description]
-     */
-    function calcDifference(day) {
-        var days = Math.floor(day / (24 * 3600 * 1000));
-        var leave1 = day % (24 * 3600 * 1000);
-        var hours = Math.floor(leave1 / (3600 * 1000));
-        var leave2 = leave1 % (3600 * 1000);
-        var minutes = Math.floor(leave2 / (60 * 1000));
-        var leave3 = leave2 % (60 * 1000);
-        var seconds = Math.round(leave3 / 1000);
-        var res = new Array(days, hours, minutes, seconds);
-        return res;
-    }
+    countTime('2016/01/30 23:45', 'day', 'hour', 'minute', 'second');
     </script>
 </body>
 
