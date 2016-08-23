@@ -2,135 +2,169 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Love between Us</title>
-    <link rel="stylesheet" href="./bootstrap.min.css">
-    <style>
-    @font-face {
-        font-family: 'JournalRegular';
-        src: url('./fonts/journal-webfont.eot');
-        src: url('./fonts/journal-webfont_162a16fe.eot') format('embedded-opentype'), url('./fonts/journal-webfont.woff') format('woff'), url('./fonts/journal-webfont.ttf') format('truetype'), url('./fonts/journal-webfont.svg') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    .carousel-fade .carousel-inner .item {
-        opacity: 0;
-        -webkit-transition-property: opacity;
-        -moz-transition-property: opacity;
-        -ms-transition-property: opacity;
-        -o-transition-property: opacity;
-        transition-property: opacity;
-    }
-    
-    .carousel-fade .carousel-inner .active {
-        opacity: 1;
-    }
-    
-    .carousel-fade .carousel-inner .active.left,
-    .carousel-fade .carousel-inner .active.right {
-        left: 0;
-        opacity: 0;
-    }
-    
-    .carousel-fade .carousel-inner .next.left,
-    .carousel-fade .carousel-inner .prev.right {
-        opacity: 1;
-    }
-    
-    .carousel-position {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-    }
-    
-    .mask {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        opacity: .8;
-        background-color: black;
-    }
-    
-    .front {
-        border: 5px solid red;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .container {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-    }
-    
-    .small-title {
-        color: gray;
-        line-height: 0.5rem;
-        font-size: 10px;
-    }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Love between Us</title>
+	<link rel="stylesheet" href="./bootstrap.min.css">
+	<style>
+		@font-face {
+			font-family: 'JournalRegular';
+			src: url('./fonts/journal-webfont.eot');
+			src: url('./fonts/journal-webfont_162a16fe.eot') format('embedded-opentype'), url('./fonts/journal-webfont.woff') format('woff'), url('./fonts/journal-webfont.ttf') format('truetype'), url('./fonts/journal-webfont.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		.carousel-fade .carousel-inner .item {
+			opacity: 0;
+			-webkit-transition-property: opacity;
+			-moz-transition-property: opacity;
+			-ms-transition-property: opacity;
+			-o-transition-property: opacity;
+			transition-property: opacity;
+		}
+
+		.carousel-fade .carousel-inner .active {
+			opacity: 1;
+		}
+
+		.carousel-fade .carousel-inner .active.left,
+		.carousel-fade .carousel-inner .active.right {
+			left: 0;
+			opacity: 0;
+		}
+
+		.carousel-fade .carousel-inner .next.left,
+		.carousel-fade .carousel-inner .prev.right {
+			opacity: 1;
+		}
+
+		.carousel-position {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+		}
+
+		.mask {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			opacity: .8;
+			background-color: black;
+		}
+
+		.front {
+			border: 5px solid red;
+			width: 100%;
+			height: 100%;
+		}
+
+		.container {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 3;
+		}
+
+		.small-title {
+			color: gray;
+			line-height: 0.5rem;
+			font-size: 10px;
+		}
+
+		.modal-content{
+			background: #040404;
+		}
+
+		.time-font{
+			color:#fff;
+		}
+	</style>
 </head>
 
 <body>
-    <audio src="./music.mp3" autoplay="true"></audio>
-    <div id="back">
-        <div class="mask"></div>
-        <div id="Carousel" data-ride="carousel" data-interval="5000" class="carousel slide carousel-fade carousel-position">
-            <div class="carousel-inner" style="width: 100%;height: 100%;">
-                <div class="item active" style="width: 100%;height: 100%;">
-                    <div style="width: 100%;height: 100%;background:url(./img/1.PNG);background-size: cover;">
-                    </div>
-                </div>
-                <div class="item" style="width: 100%;height: 100%;">
-                    <div style="width: 100%;height: 100%;background-image: url(./img/2.JPG) ;background-size: cover;"></div>
-                </div>
-                <div class="item" style="width: 100%;height: 100%;">
-                    <div style="width: 100%;height: 100%;background-image: url(./img/3.JPG) ;background-size: cover;"></div>
-                </div>
-                <div class="item" style="width: 100%;height: 100%;">
-                    <div style="width: 100%;height: 100%;background-image: url(./img/4.JPG) ;background-size: cover;"></div>
-                </div>
-                <div class="item" style="width: 100%;height: 100%;">
-                    <div style="width: 100%;height: 100%;background-image: url(./img/5.PNG);background-size: cover;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal show" style="top:24%;">
-        <div class="modal-dialog" style="opacity: .9">
-            <div class="modal-content" style="opacity:.85">
-                <div class="modal-header">
-                    <h1 class="text-center" style="color: #A94442;font-family: 'JournalRegular', Arial, sans-serif;font-size: 5rem;">the times we together</h1>
-                    <p class="text-center small-title">庄静扬 & 陈冬琳</p>
-                    <p class="text-center small-title">loving on the way</p>
-                </div>
-                <div class="modal-body text-center" style="line-height: 1.5rem;font-family: 'JournalRegular', Arial, sans-serif;font-size: 3rem;">
-                    <p>
-                        <span id="day"></span><span style="color:#A94442">/&nbsp;</span><span id="hour"></span><span style="color:#A94442">/&nbsp;</span><span id="minute"></span><span style="color:#A94442">/&nbsp;</span><span id="second"></span>
-                    </p>
-                    <p>
-                        days/hours/min/sec
-                    </p>
-                    <p class="text-center" style="color:#A94442;font-size: 10px">时间不停,爱你不止</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="./jquery-1.12.2.min.js"></script>
-    <script type="text/javascript" src="./bootstrap.min.js"></script>
-    <script type="text/javascript" src="./count-time.js"></script>
-    <script>
-    countTime('2016/01/30 23:45', 'day', 'hour', 'minute', 'second');
-    </script>
+	<audio src="./music.mp3" autoplay="true"></audio>
+	<div id="back">
+		<div class="mask"></div>
+		<div id="Carousel" data-ride="carousel" data-interval="5000" class="carousel slide carousel-fade carousel-position">
+			<div class="carousel-inner" style="width: 100%;height: 100%;" id="background">
+				<div class="item active" style="width: 100%;height: 100%;">
+					<div style="width: 100%;height: 100%;background:url(./img/1.PNG);background-size: cover;">
+					</div>
+				</div>
+				<div class="item" style="width: 100%;height: 100%;">
+					<div style="width: 100%;height: 100%;background-image: url(./img/2.JPG) ;background-size: cover;"></div>
+				</div>
+				<div class="item" style="width: 100%;height: 100%;">
+					<div style="width: 100%;height: 100%;background-image: url(./img/3.JPG) ;background-size: cover;"></div>
+				</div>
+				<div class="item" style="width: 100%;height: 100%;">
+					<div style="width: 100%;height: 100%;background-image: url(./img/4.JPG) ;background-size: cover;"></div>
+				</div>
+				<div class="item" style="width: 100%;height: 100%;">
+					<div style="width: 100%;height: 100%;background-image: url(./img/5.PNG);background-size: cover;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal show" style="top:24%;">
+		<div class="modal-dialog" style="opacity: .9">
+			<div class="modal-content" style="opacity:.85">
+				<div class="modal-header">
+					<h1 class="text-center" style="color: #A94442;font-family: 'JournalRegular', Arial, sans-serif;font-size: 7rem;">the times we together</h1>
+					<p class="text-center small-title">庄静扬 & 陈冬琳</p>
+					<p class="text-center small-title">LOVING ON THE WAY</p>
+				</div>
+				<div class="modal-body text-center" style="line-height: 1.5rem;font-family: 'JournalRegular', Arial, sans-serif;font-size: 3rem;">
+					<p>
+						<span id="day" class="time-font"></span><span style="color:#A94442">/&nbsp;</span><span id="hour" class="time-font"></span><span style="color:#A94442">/&nbsp;</span><span id="minute" class="time-font"></span><span style="color:#A94442">/&nbsp;</span><span id="second" class="time-font"></span>
+					</p>
+					<p>
+						days/hours/min/sec
+					</p>
+					<p class="text-center" style="color:#A94442;font-size: 15px" id="say">时间不停,爱你不止</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="./bootstrap.min.js"></script>
+	<script type="text/javascript" src="./count-time.js"></script>
+	<script>
+		$(function function_name(argument) {
+			countTime('2016/01/30 23:45', 'day', 'hour', 'minute', 'second');
+			var days = $('#day').text();
+
+			// title
+			if(parseInt(days/365)!=0){
+				$(document).attr("title","在一起" + parseInt(days/365) + "年,感谢相伴。");
+			}else if(parseInt(days/30)!=0){
+				$(document).attr("title","在一起" + parseInt(days/30) + "个月,感谢相伴。");
+			}else
+				$(document).attr("title","在一起" + days + "天,感谢相伴。");
+
+			//text
+			var says = new Array(
+				"时间不停,爱你不止",
+				"这一路走来,感谢有你",
+				"还记得，第一次见面的火车站",
+				"对不起，我爱你",
+				"思念是有多长，福州厦门短短数百公里，却远比天涯"
+				);
+			var sayIndex = 1;
+			setInterval(function () {
+				$('#say').hide();
+				$('#say').text(says[(sayIndex++)%says.length]);
+				$('#say').fadeIn(2000);
+			},3000);
+		});
+	</script>
 </body>
 
 </html>
