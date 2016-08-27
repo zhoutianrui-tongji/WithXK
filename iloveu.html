@@ -95,7 +95,7 @@
 		<div id="Carousel" data-ride="carousel" data-interval="6000" class="carousel slide carousel-fade carousel-position">
 			<div class="carousel-inner" style="width: 100%;height: 100%;" id="background">
 				<div class="item active" style="width: 100%;height: 100%;">
-					<div style="width: 100%;height: 100%;background:url(./img/1.PNG);background-size: cover;"></div>
+					<div style="width: 100%;height: 100%;background:url(./img/1.png);background-size: cover;"></div>
 				</div>
 				<div class="item" style="width: 100%;height: 100%;">
 					<div style="width: 100%;height: 100%;background-image: url(./img/2.JPG) ;background-size: cover;"></div>
@@ -279,6 +279,21 @@
 			};
 
 			sayFun();
+
+
+			$.ajax({
+  url: "./img",
+  success: function(data){
+     $(data).find("a").each(function(){
+        // will loop through 
+        var images = $(this).attr("href");
+        console.log(images);
+        // $('<p></p>').html(images).appendTo('a div of your choice')
+
+     });
+  }
+});
+
 		});
 	</script>
 </body>
