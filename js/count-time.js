@@ -7,9 +7,9 @@
  * @param  {[type]} s      [description]
  * @return {[type]}        [description]
  */
- const countTime = (target, d, h, m, s) => {
- 	let cur = new Date().getTime();
- 	let his = new Date(target).getTime();
+ var countTime = function (target, d, h, m, s) {
+ 	var cur = new Date().getTime();
+ 	var his = new Date(target).getTime();
  	diff = calcDifference(cur - his);
  	_countTime(d, h, m, s);
  	setInterval(function() {
@@ -26,7 +26,7 @@
  * @param  {[type]} s [description]
  * @return {[type]}   [description]
  */
- const _countTime = (d, h, m, s) => {
+ var _countTime = function(d, h, m, s) {
  	$('#' + d).text(diff[0]);
  	$('#' + h).text(diff[1]);
  	$('#' + m).text(diff[2]);
@@ -49,13 +49,13 @@
  * @param  {[type]} day [description]
  * @return {[type]}     [description]
  */
- const calcDifference = day => {
- 	const days = Math.floor(day / (24 * 3600 * 1000));
- 	const leave1 = day % (24 * 3600 * 1000);
- 	const hours = Math.floor(leave1 / (3600 * 1000));
- 	const leave2 = leave1 % (3600 * 1000);
- 	const minutes = Math.floor(leave2 / (60 * 1000));
- 	const leave3 = leave2 % (60 * 1000);
- 	const seconds = Math.round(leave3 / 1000);
+ var calcDifference = function(day) {
+ 	var days = Math.floor(day / (24 * 3600 * 1000));
+ 	var leave1 = day % (24 * 3600 * 1000);
+ 	var hours = Math.floor(leave1 / (3600 * 1000));
+ 	var leave2 = leave1 % (3600 * 1000);
+ 	var minutes = Math.floor(leave2 / (60 * 1000));
+ 	var leave3 = leave2 % (60 * 1000);
+ 	var seconds = Math.round(leave3 / 1000);
  	return new Array(days, hours, minutes, seconds);
  }

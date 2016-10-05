@@ -196,14 +196,14 @@
             var index = 0;
             var rate = 6000;
             $('#say').text(says[(index++) % says.length]);
-            setInterval(() => {
-                $('#say').hide();
+         	var _play = function () {
+         		$('#say').hide();
                 $('#say').text(says[(index++) % says.length]);
                 $('#say').fadeToggle();
                 $('#carousel').carousel('next');
-            }, rate);
+         	};
+            setInterval(_play, rate);
         }();
-
 
     });
     </script>
