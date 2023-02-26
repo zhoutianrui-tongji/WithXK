@@ -16,3 +16,6 @@
 谢谢你在这个世界的角落找到了我。
 
 这是陪你过的第一个生日，以后每个生日我都会在你身边！
+
+About
+Recoding how much time we together and the store about us. 记录我们在一起的岁月。一个简单却用心的礼物，记录我们在一起发生的事情（For 小可）
